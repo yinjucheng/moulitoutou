@@ -1,0 +1,40 @@
+nav.l-navbar
+  a.l-navbar__logo-mask(href="index-html")
+    img(src="img/logo/m-logo.png", alt="牡蠣偷偷來 LOGO")
+    //- body 控制開關，裡面的東西才不會隨 menu 置中跑來跑去
+  .l-navbar__body 
+    .l-navbar__menu
+      ul.l-navbar__btn-box.u-text-lg.u-fw-500.--link
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="index.html") 首頁
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="new.html") 新品上架
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="all.html") 所有產品
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="bib.html") 圍兜
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="lovey.html") 安撫巾
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="blanket.html") 豆豆毯
+
+      //- ul.l-navbar__btn-box.l-navbar__btn-box--icon
+      ul.l-navbar__btn-box.--icon
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="index.html")
+            iconify-icon.u-icon(icon="la:user")
+            span 登入
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="shoppingcar.html")
+            iconify-icon.u-icon(icon="basil:shopping-bag-outline")
+            span 購物袋
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="https://www.instagram.com/mulitoutou.studio/")
+            iconify-icon.u-icon(icon="carbon:logo-instagram")
+  
+  .l-navbar__burger
+    .o-burger(onclick= "toggleNavbar()")
+      .o-burger__wrap 
+        .o-burger__line
+        .o-burger__line
+        .o-burger__line

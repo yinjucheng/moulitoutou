@@ -1,0 +1,124 @@
+.l-navbar
+  display: flex
+  align-items: center
+  // justify-content: space-between
+  position: fixed
+  left:0
+  top:0
+  width: 100%
+  padding-left: 3.5vw
+  padding-right: 3.5vw
+  background-color: var(--color-bg)
+  box-shadow: 0 0 10px var(--color-gray-mid-40)
+  z-index: 999
+  &__logo-mask
+    width: 16rem
+  &__body
+    margin-left: auto
+  &__menu
+    display: flex
+  &__btn-box
+    display: flex
+    align-items: center
+    &.--icon
+      margin-left: 2vw
+  &__btn-box.--icon &__btn-wrap
+    padding-left: 0.8vw
+    padding-right: 0.8vw
+    // &::before, &::after
+    //   background-image: linear-gradient(to bottom, var(--color-secondary), transparent)
+  &__btn-wrap
+    padding-left: 1.4vw
+    padding-right: 1.4vw
+  &__btn
+    display: flex
+    align-items: center
+    height: 100%
+    line-height: 1
+    // 為了讓按鈕左右 padding 隨螢幕縮小，所以使用 vw
+    // 通常 vw 單位是 px 單位除以 20
+    // 所以 60px 的設計就會是 3vw
+    // padding: 2.8rem 3vw
+    z-index: 10
+    // &:hover
+    // &::after
+
+    &:hover
+      color: var(--color-primary-light)
+      transition: color 0.3s
+  
+  &__burger
+    display: none
+
+  +media(lg)
+    padding: var(--spacing-16) 4vw
+    justify-content: space-between
+    // &.is-opened &__menu
+    //   height: 100%
+    // &.is-opened &__btn-box
+    //   height: 100%
+    &.is-opened &
+      &__body
+        height: 100%
+      // &__btn-box
+      //   height: 100%
+      
+    //- body 控制開關
+    &__body
+      position: fixed
+      left: 0
+      top: 0
+      +size(100%, 0)
+      background-color: var(--color-gray-mid)
+      overflow: hidden
+      transition: height 0.7s
+    // menu height 100vh 裡面的東西才不會隨 body 跑來跑去
+      
+    &__menu
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      padding: 0 6vw
+      height: 100vh
+
+    &__btn-box.--icon
+      margin-top: var(--spacing-32)
+      margin-left: 0
+
+    &__burger
+      display: block
+
+  +media(sm)
+    &__btn-box
+      &.--link
+        flex-direction: column
+        align-items: center
+        text-align: center 
+      &.--icon
+        margin-top: var(--spacing-24)
+    &__btn
+      padding: var(--spacing-16) 2vw
+    
+
+      
+
+    // .l-navbar__btn::before, .l-navbar__btn:after 
+
+    // &::before, &::after
+    //   content: ''
+    //   display: block
+    //   position: absolute
+    //   left: 0
+    //   top: 0
+    //   height: 100%
+    // &::before
+    //   width: 1px
+    //   background-image: linear-gradient(to top, var(--color-gray-mid), transparent)
+    // &::after
+    //   width: 100%
+    //   background-image: linear-gradient(to top, var(--color-gray-light), transparent)
+    //   //父層沒有設z-index時,設-1會跑到body下面
+    //   z-index: -1
+    //   opacity: 0
+    //   transition: opacity 0.3s

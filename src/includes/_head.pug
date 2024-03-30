@@ -1,0 +1,46 @@
+meta(charset="UTF-8")
+//- meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+//- 新增 maximum-scale=1.0, user-scalable=0 防止手機點擊表單畫面放大
+meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+
+//- 防止iphone自動加入撥號連結
+meta(http-equiv="x-rim-auto-match", content="none")
+meta(name="format-detection", content="telephone=no")
+
+//- FB縮圖資訊，偵錯及預覽工具https://developers.facebook.com/tools/debug/
+meta(property="og:type", content="website")
+meta(property="og:url", content=baseUrl)
+meta(property="og:image", content=`${baseUrl}/${image}`)
+meta(roperty="og:description", content=description)
+meta(name="description" content=description)
+
+//- <page-title> - <site-name>｜<info-title>
+//- ${} for js 字串模板
+- pageTitle = `${pageTitle ? `${pageTitle} - ` : ''}`;
+meta(property="og:title", content=`${pageTitle}${siteName}｜${infoTitle}`)
+//- #{} for pug 使用
+title #{pageTitle}#{siteName}｜#{infoTitle}
+
+link(rel="apple-touch-icon", sizes="180x180", href="favicon/apple-touch-icon.png")
+link(rel="icon", type="image/png", sizes="32x32", href="favicon/favicon-32x32.png")
+link(rel="icon", type="image/png", sizes="16x16", href="favicon/favicon-16x16.png")
+link(rel="manifest", href="favicon/site.webmanifest")
+link(rel="mask-icon", href="favicon/safari-pinned-tab.svg", color="#bd9768")
+meta(name="msapplication-TileColor", content="#eeeae5")
+meta(name="theme-color", content="#eeeae5")
+
+
+script(src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js")
+
+//- include includes/_head.pug
+//- css 引入也有順序，通常插件在自定義的 style 上面
+link(rel="preconnect", href="https://fonts.googleapis.com")
+link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;900&family=Roboto:wght@700;900&display=swap", rel="stylesheet")
+link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU", crossorigin="anonymous")
+
+link(rel="stylesheet", href="css/swiper.min.css")
+link(rel="stylesheet", href="css/style.css")
+
+

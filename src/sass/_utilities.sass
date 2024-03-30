@@ -1,0 +1,145 @@
+.u-inline
+  display: inline
+.u-inline-block
+  display: inline-block
+
+
+.u-img-ratio
+  --img-w-ratio: 2
+  --img-h-ratio: 3
+  padding-bottom: calc(100% * var(--img-h-ratio) / var(--img-w-ratio))
+  // padding-bottom: 66.7%
+
+.u-object-fit
+  +size(100%)
+  object-fit: cover
+  object-position: center center
+  &.--abs
+    position: absolute
+    left: 0
+    top: 0
+  &.--right
+    object-position: right center
+  &.--bottom
+    object-position: center bottom
+
+.u-w-full
+  width: 100%
+.u-h-full
+  height: 100%
+
+
+// spacing
+.u-px-0
+  padding-left: 0 !important
+  padding-right: 0 !important
+.u-pl-0
+  padding-left: 0 !important
+.u-pr-0
+  padding-right: 0 !important
+.u-pt-0
+  padding-top: 0 !important
+.u-pb-0
+  padding-bottom: 0 !important
+.u-ml-auto
+  margin-left: auto
+.u-mt-auto
+  margin-top: auto
+
+.u-pt-120
+  padding-top: var(--spacing-120)
+.u-pb-120
+  padding-bottom: var(--spacing-120)
+
+.u-mt-120
+  margin-top: var(--spacing-120)
+.u-mt-80
+  margin-top: var(--spacing-80)
+.u-mt-64
+  margin-top: var(--spacing-64)
+.u-mt-40
+  margin-top: var(--spacing-40)
+.u-mt-24
+  margin-top: var(--spacing-24)
+.u-mt-16
+  margin-top: var(--spacing-16)
+.u-mt-8
+  margin-top: var(--spacing-8)
+
+.u-mb-120
+  margin-bottom: var(--spacing-120)
+.u-mb-80
+  margin-bottom: var(--spacing-80)
+.u-mb-64
+  margin-bottom: var(--spacing-64)
+.u-mb-40
+  margin-bottom: var(--spacing-40)
+.u-mb-24
+  margin-bottom: var(--spacing-24)
+.u-mb-16
+  margin-bottom: var(--spacing-16)
+.u-mb-8
+  margin-bottom: var(--spacing-8)
+
+  
+.u-ff-en
+  font-family: var(--font-en)
+.u-fw-400
+  font-weight: 400
+.u-fw-500
+  font-weight: 500
+.u-fw-700
+  font-weight: 700
+.u-fw-900
+  font-weight: 900
+
+// class 裡只要有 u-title 字眼就符合 (符合：.c-card.u-title-lg)
+// [class*="u-title"]
+//   font-weight: 900
+
+  // class 裡只要同時有 u-text 及 xl 字眼就符合 (符合：.c-card.u-text-2xl)
+.u-text
+  &-4xl
+    font-size: 6.4rem
+    letter-spacing: -0.3rem
+    line-height: 1.3
+    +media(xs)
+    font-size: 6.2rem
+  &-3xl
+    font-size: 3.6rem
+    letter-spacing: 0
+  &-2xl
+    font-size: 2.8rem
+    letter-spacing: 0.22rem
+  &-xl
+    font-size: 2.4rem
+    +media(xs)
+      font-size: 2.2rem
+  &-lg
+    font-size: 2rem
+    font-weight: 900
+    letter-spacing: 0.05rem
+    +media(xs)
+      font-size: 1.8rem
+  &-md
+    font-size: 1.8rem
+    font-weight: 700
+    +media(xs)
+      font-size: 1.7rem
+  &-sm
+    font-size: 1.4rem
+
+
+.u-icon
+  font-size: 3.2rem
+  vertical-align: text-bottom
+  &.--lg
+    font-size: 4rem
+
+.u-color-primary
+  color: var(--color-primary)
+.u-color-secondary
+  color: var(--color-secondary)
+
+.u-text-center
+  text-align: center

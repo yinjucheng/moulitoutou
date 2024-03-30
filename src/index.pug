@@ -1,0 +1,224 @@
+doctype html
+html(lang="en")
+  head
+    include includes/_settings.pug 
+    include includes/_head.pug 
+    //-因為head裡面有用到settings裡的設定,順序一定要setting在前
+    
+  body
+    include includes/_navbar.pug
+          
+    header.l-header(data-aos="fade")
+      .swiper.l-header__swiper
+        .swiper-wrapper 
+          .swiper-slide 
+            .l-header__img-mask 
+              img.u-object-fit.js-lazy(data-src="img/banner/banner-img01.jpg", alt="花花秋冬圍兜")
+          .swiper-slide 
+            .l-header__img-mask 
+              img.u-object-fit.js-lazy(data-src="img/banner/banner-img02.jpg", alt="馬卡龍格子圓兜")
+          .swiper-slide 
+            .l-header__img-mask 
+              img.u-object-fit.js-lazy(data-src="img/banner/banner-img03.jpg", alt="復活節兔子圓兜")
+        .swiper-pagination.l-header__pagination
+    
+    
+    main
+      section.l-news(data-aos="fade") 
+        .container
+          .u-mb-24(data-aos="fade") 
+            h2.u-text-3xl.u-color-primary 最新消息
+          .l-news__wrap.u-text-center
+            .l-news__img-mask 
+                img.js-lazy(data-src="img/news/news-img01.jpeg", alt="最新消息")
+
+      section.l-display(data-aos="fade") 
+        .container
+          .u-mb-24 
+            h2.u-text-3xl.u-color-primary 人氣商品
+
+          .row.--gap.u-text-xl.u-color-primary.u-text-center
+            .col-lg-4.col-6.l-display__wrap(data-aos="fade") 
+              article.l-display__article 
+                .l-display__img-mask
+                  img.js-lazy(data-src="img/display/display01.jpg", alt="商品展示-小熊圍兜")
+                h3 圓兜  
+            .col-lg-4.col-6.l-display__wrap(data-aos="fade") 
+              article.l-display__article 
+                .l-display__img-mask
+                  img.js-lazy(data-src="img/display/display02.jpg", alt="商品展示-小圓領雲朵兜")
+                h3 安撫巾  
+            .col-lg-4.col-6.l-display__wrap(data-aos="fade")
+              article.l-display__article 
+                .l-display__img-mask
+                  img.js-lazy(data-src="img/display/display03.jpg", alt="商品展示-幼兒園手帕巾")
+                h3 雲朵兜  
+            .col-lg-4.col-6.l-display__wrap(data-aos="fade") 
+              article.l-display__article
+                .l-display__img-mask
+                  img.js-lazy(data-src="img/display/display04.jpg", alt="商品展示-客製豆豆被")
+                h3 手帕夾  
+            .col-lg-4.col-6.l-display__wrap(data-aos="fade") 
+              article.l-display__article
+                .l-display__img-mask
+                  img.js-lazy(data-src="img/display/display05.jpg", alt="商品展示-繽紛雲朵雙面帽")
+                h3 豆豆毯  
+            .col-lg-4.col-6.l-display__wrap(data-aos="fade") 
+              article.l-display__article
+                .l-display__img-mask
+                  img.js-lazy(data-src="img/display/display06.jpg", alt="商品展示-禮品包裝盒")
+                h3 包裝  
+
+      section.l-about(data-aos="fade") 
+        .container
+          .u-mb-24(data-aos="fade") 
+            h2.u-text-3xl.u-color-primary 關於我們
+          .l-about__wrap.u-text-center
+            .l-about__img-mask 
+                img.js-lazy(data-src="img/about/about-img01.jpg", alt="關於我們")
+
+      section.l-product
+        .container
+          .u-mb-24
+            h2.u-text-3xl.u-color-primary 新品上架
+
+          .row.--gap.u-text-xl.u-color-primary.u-text-center
+            .col-xl-3.col-md-4.l-product__card 
+              .l-product__img-mask
+                img.js-lazy(data-src="img/product/product-img01.jpg", alt="新品上架-哈囉熊熊紳士兜")
+              .l-product__des.u-text-xl.u-color-primary
+                .l-product__name 哈囉熊熊紳士兜
+                .l-product__price NT320
+              .l-product__btnbox
+                .l-product__btn.--reduce -
+                .l-product__number 0
+                .l-product__btn.--increase +
+              .l-product__msg.u-text-md 說明文字
+              .l-product__shoppingbtn.u-text-md.u-color-primary 加入購物袋
+            .col-xl-3.col-md-4.l-product__card 
+              .l-product__img-mask
+                img.js-lazy(data-src="img/product/product-img02.jpg", alt="新品上架-花花世界圍兜")
+              .l-product__des.u-text-xl.u-color-primary
+                .l-product__name 花花世界大花兜
+                .l-product__price NT280
+              .l-product__btnbox
+                .l-product__btn.--reduce -
+                .l-product__number 0
+                .l-product__btn.--increase +
+              .l-product__msg.u-text-md 說明文字
+              .l-product__shoppingbtn.u-text-md.u-color-primary 加入購物袋
+            .col-xl-3.col-md-4.l-product__card 
+              .l-product__img-mask
+                img.js-lazy(data-src="img/product/product-img03.jpg", alt="新品上架-蕾絲拼接圍兜（粉）")
+              .l-product__des.u-text-xl.u-color-primary
+                .l-product__name 蕾絲拼接圍兜（粉）
+                .l-product__price NT360
+              .l-product__btnbox
+                .l-product__btn.--reduce -
+                .l-product__number 0
+                .l-product__btn.--increase +
+              .l-product__msg.u-text-md 說明文字
+              .l-product__shoppingbtn.u-text-md.u-color-primary 加入購物袋
+
+      section.l-comment
+        .l-comment__btn-swiper.--prev
+          iconify-icon.u-icon(icon="fa6-solid:arrow-left")
+        .l-comment__btn-swiper.--next
+          iconify-icon.u-icon(icon="fa6-solid:arrow-right")
+
+        .container
+          .u-mb-24
+            h2.u-text-3xl.u-color-primary 好評推薦
+          .swiper.l-comment__swiper 
+            .swiper-wrapper
+              include mixins/_card.pug
+              //- pug 變數
+              //- 資料庫
+              -
+                const commentList = [
+                  {
+                    img: 'img/comment/comment-img01.jpg'
+                  },{
+                    img: 'img/comment/comment-img02.jpg'
+                  },{
+                    img: 'img/comment/comment-img03.jpg'
+                  },{
+                    img: 'img/comment/comment-img04.jpg'
+                  },{
+                    img: 'img/comment/comment-img05.jpg'
+                  },{
+                    img: 'img/comment/comment-img06.jpg'
+                  },{
+                    img: 'img/comment/comment-img07.jpg'
+                  },{
+                    img: 'img/comment/comment-img08.jpg'
+                  },{
+                    img: 'img/comment/comment-img09.jpg'
+                  },{
+                    img: 'img/comment/comment-img10.jpg'
+                  }
+                ]
+
+              - for (let i = 0; i < commentList.length; i++)
+                .swiper-slide.l-comment__slide
+                  +commentCard(commentList[i])
+
+              
+  include includes/_footer.pug 
+
+  include includes/_scripts.pug
+    script(src='js/swiper.min.js')
+    
+
+    //- swiper初始化
+    //- script 多一個點是 pug 寫 script 的方式
+    script.
+      const headerSwiper = new Swiper('.l-header__swiper', {
+        effect: 'fade',
+        longSwipesRatio: 0.1,
+        loop: true,
+        speed: 800,
+        autoplay: {
+          delay: 3000,
+          // 手動換頁之後停止自動輪播
+          // false 手動之後還是會自動輪播
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      });
+
+      const commentSwiper = new Swiper('.l-comment__swiper', {
+        longSwipesRatio: 0.1,
+        loop: true,
+        speed: 1200,
+        // 顯示幾個
+        slidesPerView: 'auto',
+        // 間距
+        spaceBetween: 4,
+        breakpoints: {
+          1400: {
+            slidesPerView: 4,
+            spaceBetween: 16,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 8,
+          },
+          780: {
+            slidesPerView: 2,
+            spaceBetween: 4,
+          },
+        },
+        navigation: {
+          prevEl: '.l-comment__btn-swiper.--prev',
+          nextEl: '.l-comment__btn-swiper.--next',
+        },
+      })
+
+
+
+
+    
